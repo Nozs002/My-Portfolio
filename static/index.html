@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My 3D Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <!-- robot frontend -->
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.12.33/build/spline-viewer.js"
+    ></script>
+    <spline-viewer
+      url="https://prod.spline.design/fUxdJO5baDTtElbk/scene.splinecode"
+    ></spline-viewer> -->
+
+    <!-- robot đen -->
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.12.36/build/spline-viewer.js"
+    ></script>
+    <spline-viewer
+      url="https://prod.spline.design/7cZ9iEvJx3ziGsTQ/scene.splinecode"
+    ></spline-viewer> -->
+
+    <!-- robot trắng -->
+
+    <header class="taskbar">
+      <a href="#Home" title="Về trang chủ" class="logo_home">
+        <img src="../templates/" alt="Logo Portfolio" />
+      </a>
+      <nav class="menu_taskbar">
+        <a href="#Home" class="button_menu_taskbar active"
+          ><i class="fa-solid fa-house"></i> Home</a
+        >
+        <a href="#About_me" class="button_menu_taskbar"
+          ><i class="fa-solid fa-address-card"></i> About me</a
+        >
+        <a href="#Skills" class="button_menu_taskbar"
+          ><i class="fa-solid fa-code"></i> Skills</a
+        >
+        <a href="#Projects" class="button_menu_taskbar"
+          ><i class="fa-solid fa-diagram-project"></i> Projects</a
+        >
+        <a href="#Contact" class="button_menu_taskbar"
+          ><i class="fa-solid fa-address-book"></i> Contact</a
+        >
+      </nav>
+      <div class="header-right"></div>
+    </header>
+    <main>
+      <!-- Trang home -->
+      <section id="Home" class="home-section">
+        <div class="Home-bg-3d">
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.12.37/build/spline-viewer.js"
+            async
+          ></script>
+          <spline-viewer
+            url="https://prod.spline.design/mka7uX4qeKzUJRuj/scene.splinecode"
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAQAElEQVR4AZyajXocN45FKb3/G+7OxP+WnWQfIF1V3HMuSFZ1S0o8o4+3AFxcACyy257I8/x/f/7ZJ/7848/+5x9/9D9+/6P//vP3/vPHz/7jx4/+8gK+v/Tv3773b+Lrt/4NfB3Q//YNDnz//r2LF+zLywu1L/0H9hHJ0+vFGvp8//K1f/vypX/7/KV//fy5f/0kPmEfYC5Aqz51zKbHt6/fu/j65Xuf+PL5e//8CXz81j+JD1/7p9++9I//Fp/7x399Ah+DT//60MXnf3/oX8RvH/vXDx/7t4+f+nf288LcF2b++Pq1/2TeT/b/k3Mp/Og/v//oPwZe4D0v8Q3tV+q+fPncP3/+1D9/+tA/ffqtf/z47/7xw7/6hw//C/4neG7jp9/ZGUFeXKJfXn9bdkle3F/uPYVn7Vtea/2kZ0ls0fUM8V88/rPqX1QjWxfSCHiFuR622Ct9YSMf8Z1/dwqV8XkPo1Ecc/a/ZvQf8biRlcfpzsam5X/xuJZe/Wp17nHuIRpnRnDmT8/jjCqKqhvZC13Jej7Li4dSakehughGzAYSyqOyTkCH8ZGDwQmXB8FclzgdacZKtiwsDs9wjw95W0z7mDemfH079LO/JKzSKZibKEZl4TFW5+vW7KmpfpOTDYN4nkFqaAZVz3KklZc1A89qz9k5HQ3MzoZoWEaC2iGIQehAyqocJQr80hqaj+WhLxBQqRJYbA64UklzluFFp3aAjPnAhzF9WLROh1geq376SMPRKbbKeT6ZkS00Ytih0ZOnNy4r4rInh8cYniYAXunYWHwsgtGTFJrRNYFpnKzLN6QksjbxABWmNq3IJyAbq1IQuETCM189SMiDeD5oPAydS59YDQ4LvuYtf+YgWCP/WEusDlDNGVSseHi6yfpYfQj0MStvvIDDSs4+9V5OAL6LoDg5VIRjNlUuYR5LQoUGxnoNCReFz9WcVgRwCPURqqM0iwQsLs/45vHDnD7FLirJjX4EcCMOhw+Jm+pX1pyZy5yDWEDhMY8iVjsgWKO/vKA/pHlakYOjypiMgVHrfBPMh9B/IoultAVXH2E4MnNm9kPTnJ/56WvRhacodsTOgsqeKLmz8nLrG8J20Odp+Z0vyxz1lfNJhwwjoYVyAdRyqrULackmZl4LZ4W9lm3nQcPlAMyDg17GwplQaDtoo69W9BFj6aEOFs+nG9Oa0/49cvCUqM7c4bOVmmFMkP1cLdPCDeuUxGiWv3Iw8Kz6O6SEkEvgeGIUyTGU6G4DxoOOa4VaRC4Ak/qk7TxQMQELDU08MHHEP7nzAKqGdtUXXbQQrHCltVYMPTr3FOC7zDrrl4GQVZdOA3tlFoPdgx8SuV/D2BcNKU+Ay/5pzNLnG6KpbSqKB5UBQ2TFjOPLIy4uFdDYcM5JA7jy1RloF3Id5K3Rt2TZxgHQL3P0B4jPQxic9aO2DqoxitrwJKjxCVN8Yhl0zhuxzCOcJXf3LVFP73BY30f/CrnA/mpSU/PYBCu7iUXCInYQ4O8QhDiwLJwsBGliMPwRw6RRbLiqZy4Rvl0IWHrR8nCNPBqKk+eBm5xTCFsOAWfyiamEKh0J/fpkVq/T77nIMzbfqRP49PFJC/ZG8ObfE632QHrqnEcHejfqOvlOz0aMlUHAgiPG4Ylvg3jNIBdkTpCizGWqAKc63xCdgB1cLZ1GUVhKYGioswagMEuGxnjmV584KJJNngcxujzpFImxGnH6dRnE9FyfQPTzm7AOnjbLJ4883anEkhzrGi9//mW+LoeMHJV4HL57ahx+C7NmJ+rFZ2b31YAWmGcjrOKIx6JR5Su2mA0iZLX1DTFASTHJUsa3VKYoigm8DEwtKYpZ0UtaEw256RtHowDE55H8jBkCxZOdrNpWh2IsyGLWQXhRqYGsGdXxjksNAucEVx9irO5FjIupD0NL5fRzGWGYQYuagT+5WGpIZC/21YevVUU8c1ZWFk+NWsCvTpLGJa2LQkMExyLQF6RYEKFhxjAZomLlJCpiMAGLMLXZqBqi4moz1g9ZMokhWPQYGgJKic1eOeKZo+mpgZ+xFlTV+aRszTO9Ypz0gbRLgTr4u4uher0TBfqUyI59UgBhPQaeJzqe5OmnAysluJAi78rMILRJ8QSs+DxYVQS3FuQog6KSmDn4SkecyLgcJfHOwpT4UubuQMAaeXpQk4OBLMsMstAks/LC6e9jJvApybMsrnWYFeOwYOmDY2lhzFB75Y3BXKpSXA/2gZik74UZrF7B3uU1/siaXtUkurjERCwc1nSmdcP46YhVoRGMdWNJwaNkySQYD2NBSmbU6U7MelP6AUktb+pK8cxLpKOEe0CY2JqBFODXmtlikVM1M4MjtF3Aw4O1Cjdaa3SKk6VgrPvIfsXYQ8lpyZHid1nQOIQ4lxWuYgeVd6+avFJR2cEWkTI3bCg8MHVDlfx8mH+Eudp0VaSXIhIaWW0OBIdle8J4qGolOh/k5a3WpoSH8QMY6HxMatKCkoqNClZBZ90zRrROddLrURlzi+I/DE+/vKl6o8GDoMJ/fK6G/6i821rKfM04dY/Z0xl7KFI5sNmdNCtR8nqTUGz8Fpa4koZBhVTSBIKFv8j4ZAZxMU/v+Bc6xcaXBvk7RO6Kay/5a3z1zb2Hy4z3JA/8YwUx6040Y0/lLkEwcsPc3S1Z1srgu2aMHf3wUucFx/HEIEfaiEKJlSV+e3lOTz789TGSJ+0Tzt8s5z6rEc2C1lo1afw8tac8eby5euN/Jb6Zqe2S6uCdZW9T2idetWwbM/uwxL2tdnin7ymR01BOygDjwtW8ieTyII2tNXyCalZzDBPzTdUXUeKwcM/lC4yo3PEs0/JCrU3T5s9sM+36hsy6KXyM5Sc37XtcY2w0ebT86E6E4GFcb06w1tzaJIw7l99Pab/mhh+OB2swZRLnwa6k8FlP3iRWxg9Ezp3AT2n+fCSvj6m5cXBHDdKH5ds8taenp9ZYBR1CudZCzWd7/Bn914WYr/I2Ctv6kReLeHD+Lqf0Mf9WLOfB+K2bPq9v+WU/nMbYeA6QMAcb1euHfVYPtPpXznge/mnpg5aVtLwXA4sbtngJYL8ndviEj/GJeQKt8NTyE+NjIux8jL6Elz+yiGjhgeiJt2rlPIxYRf8pRmGZzsTZoA8H66Fj3EsOPHHnWzIlHUdgXNPFeqnrxKwjX7NwyPOsZS4xD1ZqwhG8spSEGxajfvVN3PIu4Xz4rdDC6mJaq0fLT3LOSrQe6xuS/KLbtbTlh9pHTfj5IO9FVWiAN4ybJ6oVzkevGb1hew7bw3RGAY6G5atp/MB5MHikqOlpbZ2xdADNxzluHsZTYL0woX0P9V+b9Kf4TkMhlB+WtMSHORenf+75qRGO3NOww6y68fcTzfwmrgtRlhfTmVhFEgQsPXaZFV/ODSfgYYx5vUwMDMMekBlgDHTt9Q7ybUGqPfdKESsbSl1rd6++cg0JwdDkwuJ7IPCXC+gX/9RRnz12+neDBecVfEpjWXqFJ2pa0N78cQ+VOC/EGQI+t+9wISfgeaMs6QpNCGmtIINhBA4Ln6eCmPNhorPJTq7gIU9Asor3ULwE7WvYUZ1WONl4wM3ipk4/EohxGeHx/XTmIg5+ldgLxvJqYqFnebXq7F/mxJNuHjjT4p6r13ulwfAxkIzp/IehARsKYRW+1NSjgoWRx8w4GzQDR8rypIqXlMLS6OSIl3gWD4tuNKCw548jL0duXcbUxD7Uheup1SWLz5N5zs816Y9Pfzji/NrYSwjP744H52U0LwY+PraNXKz+GMeU+wUfYlo2lPnY8DxMjRawZBPkQki5QA1SXYJsGvkdT2ytnHnfWjtRMU9FgEVD4wJPVobFWmcvcfpH5XIIHlLFObxxSE1rczDrtIRVi1Mxs/BTe+2XS6A3XOnKb/AdlKVWP7Pcg4CjnzUNyzAWXL0lT33AIni9qJm12kfw7yF1+DZ/TMq1teHS9ceYAeqsnVb/LbyVb7ysWufE5wAyA2vcVn8ODG3F+mM/g0uPaCunrl9yndyC7yDCoWdWfwVONBxz1E7Qs+NXfzTpgSZ23A20NwGLjGdyF5sPtTGz7RdUvC4km2XQnZ2N5N3cim1Eg/Cds+wZ7L/aHXJTF6v2AvOBHHX62RDxmoFvrfFAwzZ1WPeoH8z6wZvrF52Hl3hwhzpwjLjj9515AzMf3twrcNrWsr8GeubLFbrcQPLDv/JVw8yZswdzDuJnk25CWFQWsQKEh0Co+IDrwjj2aIeb0xf61xy11bMO/jAXzcFewazRBuoGb6xWK66+8UR46rSg9tjZV2/u9RjcwV5Ej2UGF3AIQa8D9GNvuRz8A//A9jdw0EP+MMc7zXd0Vid3yJE78M0tyJnLnsb+wh3s98h+nw+INMGWf7SDRgX9E31ojrfsGPJmTn3yB0M7/Y87nH05ELTGnQOZh2Ocwxu5g9yBf0UfcV9zzhnmROlrRvmlMeesxXFJxuJ4mNWZI9T2nNPBO03wbszvaM5LOS7vSt7cBFr7XJELWQQb2RXv+6UJDeE9EHNC35qrX9xDnb0m7BF/aBLjY3dgv8DZAXNzGGiGzYvilz3zHe5Ibzkxa/Dp7T53e6ozBtmvHDhz1BEf0eHHHnxr8OH7mrHnEg7yfXHH6zN7Lzd596GvFfR73nkIN3jao7nJiQNNwKamLodIbE3BGrFnY8lTZ49j6GIZLFeHhB6NveWSJ04/aowX5OW0wJp5CeorZnY09GVO5eXGYcFlDvXWZI/qgfyM43NQWufHXuKcATVX66zonKF2grh07Im51Q+fes8gsTxw/rMPGxWGUPEFG77YaV66fVyY+onBpfHwqUuNm3tVe9W89rPR1JMbPSenvUP6o1M/fC/ofq8j/wv7uPb24uwVbuzDvnXIddnGYnL678PzYi93vYjdO+BCtrZve9sIbDKt/gJ5/W3fotvutFvb4ffBve61tW3bopl10Y6e6t+CWnGnvc5x3lF99zte7nyfXd3A7Lc5W8BP7qr7NX/OKWvNNvdh74nrDLiNWG3eefiLI352cxIBB1eWFxrFiRFGF44NLLtx2EM7a9Huw9+j27mMPbrE5sJbC3iJ7Q5o6SHnxrWi/J1e15q9bWjNFczt0ezOSd8dDTzxnngjLyeG735A5eVF5fbVnzianXr8xe9nf/Ibc7YxZ0tMPnZDt7fsC419N+w2+pTdGheC0IQgGVH8C28sHDSbY2/GC3s7ay++dXe45vRP3Oi5eqwa8nNfmbU3X2bH9+W0qSHOS1mnXqx+ezO3JcaP9f2Gj3YH5rU7eWHNbj9i/S0ztsyPn9zWtkd7s+9b/NZu0c78tFvLHPbwfGOYsOktYooYrP+IDe2GRl67Jbap2F5vDO12wVmntmrkJtTqazd66+fS6aG/YYX+jfw6FPYrH1z9oQ+PfwPWpCcvvwXshZqTq/jMsU/y6YE+B2cfMXl9kP7Ybbu17cY56mP1xZlnhrmA/r5LDiA/lAAABKJJREFUML4hCoVDtTebRHxfmBz8tEs/OGNh/i07OfMT141O7mpnzcbL3zgQc/pC/wavxlgrp01sjhrjyb+2lwNR78FYs/yt7fpyvqc+1p4LnFfObFj9wo1vxMRWH1g11M99rB5wG7P5hnCb3KiCNCER/5Wl8Wi2zRzxdqM+qE+EtXKx6tRoHwGvJrj60e28yNkvGvjM5UCM9XPo8G9dipor1N9yqPauSzBvjxs9N3K3C4y3C1++h0o9vLWvz8szCtqNM0ned7uC/fohDPQH7OceuZDri9MMgck0m/6yl3y4a4zPYJta78BYdfDph81lYW9+CLB/mQd/4UejD6zNAenPA8C3v7g9cNHPPDk1E6X1Eupd5cN5AXwqN2CsnQefmPyM7+yck3fwvetDmf3P94itXF3O9GsPc7/abfXjjyyJd2FTxHf5yU17yftnp1oHeODzUiZXvJ8yNjXrp6VPXQ6fwOVv7S8Pi/jG4dw46AU4+3lQ6U/OWN/ZZbd8006+4vSg7wZu6ctlYbdH8N8K5sOjVb8x993e+VbMg5+Wmb7jHbxAzgHOfgX2QO+HbwjFkAquQ9/yrxp9oW5eworf7VcHb03BeOcCag83DuBG7Y2Dvk3fePibPAd4g4uPVau/odmIhfmbsfrYnUvi5Y3BRg9xw96uF4C/XfLls7dwHKaWGbeJeRkj/isx+mXxybknYZ1W3LIvemLXhawERbcJht4QXeHGbubJbeQ2fbDF52XDV/MNXq32BBp4Y3M36gpsmNry0dz5xhP09vDsgWbD3+ix6cNZH5/4BpY/NDf1YNrtwffXGVsuw0s7WvnMXJw8cJb9sfNPhhv+/ONpi8878S2QM86HlXhzL+AG9Ot/udGTvTy7ocAkA64bVbzReINfiI7iWDZKky3Q39rZfGubdeouuNmPOHOwam7Yu5h+xmLD/0fwX+xTs/4X0bWO/jN/Z/k1i7G/HtnxtZsHH78uQ24nVreR29PXd7ucgf3zXvDD+veJZ3dLvPOtPHPyIr2spae+OC+EYQ6V1L6Fnd8DbaNYOzFryh6t7B47/VfasZFt9DRfF3BwkTvAjj2Zm9iZn4MZh+SBmZMX5oyFsZCLZVYstbtIL+ecCG/uDnsrXgusA+mFddbm+1whPy5jw+4jN2v2sRf3v3xq+F3WwcEJBrkJyAj0J1J85Otrg82Yw8om9a8Iv7f6RdtBb/teMLXRzbwWMK96l+8+NjmQWVjj8u05dPCLo7+/DKy48tlLNI81vX4zndyB3+vg+XeKHRxg9rn6cvntru/AvN0zi09//A14AfvMYTe5aA7OBAzfvVUvuaM9OygY/9iSYWxE0R0W19tVH9/cBC93V/dOvDNvJ7cve7QD336L41/XjMU8oENu1B3OxD8mzMFZvzhy97XsH+6Ys1IDF8sesD25yQ07a2LRvWP3C79z6B744riY5V90B74zO/a5rw0cLT7x8Q7Mm9N2XryjEwcv0EHs5IY1b27irO8t3EVnbiJ15K6xvvy0d/76Pw7Qlzpz4qp9jF/nml0aJ9HU3iEZeg971qJmnu++OM/C84ml5s43BuSu/a2Fav8PAAD///J4OlgAAAAGSURBVAMAlA+WYOW1FmQAAAAASUVORK5CYII="
+              alt="Spline preview"
+              style="width: 100%; height: 100%"
+          /></spline-viewer>
+        </div>
+        <div class="home-content">
+          <div class="badge">Availabale for work</div>
+          <h1 class="home-title">
+            Hi, I'm <span class="gradient-text">Nozs002</span>
+          </h1>
+          <h2 class="home-subtitle">
+            Backend Developer <br />
+            & AI Engineer
+          </h2>
+          <p class="home-description">
+            Turning complex logic into intelligent systems using Python &
+            Machine Learning.
+          </p>
+          <div class="home-button">
+            <a href="#Projects" class="btn-primary">View My Projects</a>
+            <a href="#Contact" class="btn-secondary">Let's Connect</a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </section>
+
+      <!-- Trang about me -->
+      <section id="About_me" class="about-section">
+        <div class="about-img-wrapper">
+          <img src="../templates/avt.jpg" alt="me" class="about-avatar" />
+        </div>
+        <div class="about-content">
+          <div class="about-title">
+            <h2>About <span class="gradient-text">Me</span></h2>
+            <h3>Where Logic Meets Artistry</h3>
+          </div>
+          <div class="description-about">
+            <p>
+              I am a student at
+              <b
+                >the Posts and Telecommunications Institute of Technology
+                (PTIT)</b
+              >
+              with a clear vision: to become a specialized
+              <b>Backend Developer & AI Engineer.</b><br />
+              To me, writing code is similar to <b>playing the guitar</b> or
+              <b>painting</b>—it requires the precision of logic but the soul of
+              creativity. My artistic background helps me visualize the big
+              picture, while my technical foundation in <b>Python</b> and
+              <b>Machine Learning</b> brings those concepts to life. <br />
+              This blend of skills is best reflected in my flagship project: the
+              <b>MIS System</b>. Beyond standard performance management, I
+              engineered an "<b>AI Brain</b>" for it—a predictive model capable
+              of forecasting inventory trends with high accuracy. <br />
+              Additionally, my time as a <b>STEAM Instructor</b> has sharpened
+              my ability to simplify complex concepts and communicate
+              effectively. I don't just write code; I craft intelligent and
+              engaging solutions.
+            </p>
+            <div class="about-extras">
+              <div class="extra-box">
+                <div class="box-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="box-text">
+                  <h4>Education</h4>
+                  <span>PTIT - 3rd Year</span>
+                </div>
+              </div>
+
+              <div class="extra-box">
+                <div class="box-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="box-text">
+                  <h4>Projects</h4>
+                  <span>10+ Completed</span>
+                </div>
+              </div>
+
+              <div class="extra-box">
+                <div class="box-icon"><i class="fa-solid fa-guitar"></i></div>
+                <div class="box-text">
+                  <h4>Hobbies</h4>
+                  <span>Guitar & Art</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trang Skills -->
+      <section id="Skills" class="skills-section">
+        <div class="skills-content">
+          <div class="top-section">
+            <h2 class="title-section">Skills</h2>
+          </div>
+          <div class="skills-content-wrapper">
+            <div id="tech-stack" class="tab-content active"></div>
+            <div id="certificates" class="tab-content"></div>
+            <div id="experience" class="tab-content"></div>
+          </div>
+          <div class="skills-controls">
+            <button type="tab-btn active" data-tab="tech-stack">
+              Tech Stack
+            </button>
+            <button type="tab-btn" data-tab="certificates">Certificates</button>
+            <button type="tab-btn" data-tab="experience">Experiences</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trang Project -->
+      <section id="Projects">
+        <h2>Project</h2>
+      </section>
+
+      <!-- Trang contact -->
+      <section id="Contact">
+        <h2>Contact</h2>
+        <h3>Connect with me</h3>
+        <p>
+          I'm always open to new challenges in Python backend development or
+          creative projects. Don't hesitate to send me a message.
+        </p>
+        <div>
+          <ul>
+            <li><b>Email:</b> Phamson26082005@gmail.com</li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/s%C6%A1n-ph%E1%BA%A1m-815198385/"
+                ><b>Linkedln</b></a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Nozs002"><b>Github</b></a>
+            </li>
+          </ul>
+          <button>Send email now!!!!</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
