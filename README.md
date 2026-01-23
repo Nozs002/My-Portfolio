@@ -23,4 +23,4 @@ I'm Fullstack Developer. I am passionate about building highly scalable web appl
 
 ## 📈 GitHub Stats
 
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=[Nozs002]&show_icons=true&theme=radical)
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=Nozs002&show_icons=true&theme=radical)
