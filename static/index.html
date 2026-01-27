@@ -163,21 +163,167 @@
 
       <!-- Trang Skills -->
       <section id="Skills" class="skills-section">
-        <div class="skills-content">
-          <div class="top-section">
-            <h2 class="title-section">Skills</h2>
+        <div class="skills-container">
+          <div class="skills-header">
+            <h2 class="skills-title">Skills</h2>
+            <h3 class="skills-subtitle">Stuff I’m good at</h3>
           </div>
-          <div class="skills-content-wrapper">
-            <div id="tech-stack" class="tab-content active"></div>
-            <div id="certificates" class="tab-content"></div>
-            <div id="experience" class="tab-content"></div>
-          </div>
-          <div class="skills-controls">
-            <button type="tab-btn active" data-tab="tech-stack">
-              Tech Stack
-            </button>
-            <button type="tab-btn" data-tab="certificates">Certificates</button>
-            <button type="tab-btn" data-tab="experience">Experiences</button>
+
+          <div class="skills-body">
+            <div class="skills-nav">
+              <button class="nav-item active" data-tab="tech-stack">
+                <div class="nav-icon-circle">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="nav-text">Tech Stack</span>
+              </button>
+
+              <button class="nav-item" data-tab="certificates">
+                <div class="nav-icon-circle">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="nav-text">Certificates</span>
+              </button>
+
+              <button class="nav-item" data-tab="experience">
+                <div class="nav-icon-circle">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="nav-text">Experience</span>
+              </button>
+            </div>
+
+            <div class="skills-display-area">
+              <div id="tech-stack" class="tab-pane">
+                <div class="dark-grid">
+                  <div class="dark-item">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                  </div>
+                  <div class="dark-item">
+                    <i class="fa-solid fa-brain"></i><span>AI & ML</span>
+                  </div>
+                  <div class="dark-item">
+                    <i class="fa-brands fa-html5"></i><span>HTML/CSS</span>
+                  </div>
+                  <div class="dark-item">
+                    <i class="fa-solid fa-server"></i><span>Backend</span>
+                  </div>
+                  <div class="dark-item">
+                    <i class="fa-solid fa-database"></i><span>MySQL</span>
+                  </div>
+                  <div class="dark-item">
+                    <i class="fa-brands fa-git-alt"></i><span>Git</span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="certificates" class="tab-pane">
+                <div class="dark-list">
+                  <a
+                    href="https://coursera.org/share/b9cd343de4a98e3a5b444f07c7d0b892"
+                    class="dark-card"
+                  >
+                    <div class="cert-img">
+                      <img
+                        src="../templates/machine-learning.png"
+                        alt="machine-cert"
+                      />
+                    </div>
+                    <h4>Machine Learning A-Z</h4>
+                    <p>Coursera - 2025</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+
+                  <a
+                    href="https://coursera.org/share/94df3a9b76087a0a794c6f7eb51e5690"
+                    class="dark-card"
+                  >
+                    <div class="cert-img">
+                      <img
+                        src="../templates/python-cert.png"
+                        alt="python-cert"
+                      />
+                    </div>
+                    <h4>Python for Data Science</h4>
+                    <p>Coursera - 2024</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+
+                  <a href="" class="dark-card">
+                    <div class="cert-img">
+                      <img src="../templates/aptis.png" alt="English-cert" />
+                    </div>
+                    <h4>English cert</h4>
+                    <p>British Council - 2024</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+
+                  <a href="" class="dark-card">
+                    <div class="cert-img">
+                      <img src="../templates/delfb1.png" alt="French-cert" />
+                    </div>
+                    <h4>French cert</h4>
+                    <p>Delf B1 - 2021</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+
+                  <a href="" class="dark-card">
+                    <div class="cert-img">
+                      <img src="../templates/tinh-phap.png" alt="French-cert" />
+                    </div>
+                    <h4>French province cert</h4>
+                    <p>Quang Ninh province - 2022</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+
+                  <a href="" class="dark-card">
+                    <div class="cert-img">
+                      <img
+                        src="../templates/cap-truong.png"
+                        alt="French-cert"
+                      />
+                    </div>
+                    <h4>school-level French competition</h4>
+                    <p>high school Hon Gai - 2020, 2021</p>
+                    <span class="verify-btn"
+                      >Verify<i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                      ></i></span
+                  ></a>
+                </div>
+              </div>
+
+              <div id="experience" class="tab-pane active">
+                <div class="dark-timeline">
+                  <div class="dark-card">
+                    <span class="time-tag">2023 - Present</span>
+                    <h4>STEAM Instructor</h4>
+                    <p>MVA Academy</p>
+                  </div>
+                  <div class="dark-card">
+                    <span class="time-tag">2024</span>
+                    <h4>Coding teacher</h4>
+                    <p>BrightChamps Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
