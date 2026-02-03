@@ -1,0 +1,43 @@
+.gradient-text {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.skills-title {
+  font-size: 64px;
+  font-weight: 600;
+  background: linear-gradient(
+    108deg,
+    rgb(0, 144, 247) 0%,
+    rgb(186, 98, 252) 33%,
+    rgb(242, 65, 107) 66%,
+    rgb(245, 86, 0)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  display: inline-block;
+}
+
+.skills-subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(
+    108deg,
+    rgb(0, 144, 247) 0%,
+    rgb(186, 98, 252) 33%,
+    rgb(242, 65, 107) 66%,
+    rgb(245, 86, 0)
+  ); /* Gradient Apple Intelligence */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}

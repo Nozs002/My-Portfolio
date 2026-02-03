@@ -1,0 +1,74 @@
+.taskbar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.menu_taskbar {
+  pointer-events: auto;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+
+  color: rgb(29, 29, 31);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 8px;
+
+  width: max-content;
+  max-width: 90%;
+  height: auto;
+
+  background-color: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: saturate(180%) blur(20px); /* làm mờ hậu cảnh đằng sau */
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.button_menu_taskbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* giữ cho khung không bị phình ra bởi padding */
+  gap: 8px;
+  padding: 10px 24px;
+
+  color: rgb(29, 29, 31);
+  text-decoration: none;
+  white-space: nowrap; /* cấm xuống dòng */
+  font-size: 14px;
+  font-weight: 500; /*độ đậm chữ bình thường*/
+
+  border-radius: 48px; /* bo tròn nút */
+  transition: all 0.3s ease; /* hiệu ứng chuyển mượt */
+  cursor: pointer;
+}
+
+.button_menu_taskbar:hover {
+  color: #ffffff;
+}
+
+.button_menu_taskbar.active {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}

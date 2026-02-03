@@ -8,33 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
   </head>
   <body>
-    <!-- robot frontend -->
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.12.33/build/spline-viewer.js"
-    ></script>
-    <spline-viewer
-      url="https://prod.spline.design/fUxdJO5baDTtElbk/scene.splinecode"
-    ></spline-viewer> -->
-
-    <!-- robot đen -->
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.12.36/build/spline-viewer.js"
-    ></script>
-    <spline-viewer
-      url="https://prod.spline.design/7cZ9iEvJx3ziGsTQ/scene.splinecode"
-    ></spline-viewer> -->
-
-    <!-- robot trắng -->
-
     <header class="taskbar">
-      <a href="#Home" title="Về trang chủ" class="logo_home">
-        <img src="../templates/" alt="Logo Portfolio" />
-      </a>
       <nav class="menu_taskbar">
         <a href="#Home" class="button_menu_taskbar active"
           ><i class="fa-solid fa-house"></i> Home</a
@@ -52,7 +29,6 @@
           ><i class="fa-solid fa-address-book"></i> Contact</a
         >
       </nav>
-      <div class="header-right"></div>
     </header>
     <main>
       <!-- Trang home -->
@@ -72,7 +48,7 @@
           /></spline-viewer>
         </div>
         <div class="home-content">
-          <div class="badge">Availabale for work</div>
+          <div class="badge">Available for work</div>
           <h1 class="home-title">
             Hi, I'm <span class="gradient-text">Nozs002</span>
           </h1>
@@ -98,7 +74,12 @@
       <!-- Trang about me -->
       <section id="About_me" class="about-section">
         <div class="about-img-wrapper">
-          <img src="../templates/avt.jpg" alt="me" class="about-avatar" />
+          <img
+            src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/avt_zlrxhd.webp"
+            alt="me"
+            class="about-avatar"
+            loading="lazy"
+          />
         </div>
         <div class="about-content">
           <div class="about-title">
@@ -171,23 +152,23 @@
 
           <div class="skills-body">
             <div class="skills-nav">
-              <button class="nav-item active" data-tab="tech-stack">
+              <button class="nav-item" data-tab="tech-stack">
                 <div class="nav-icon-circle">
-                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-layer-group"></i>
                 </div>
                 <span class="nav-text">Tech Stack</span>
               </button>
 
-              <button class="nav-item" data-tab="certificates">
+              <button class="nav-item active" data-tab="certificates">
                 <div class="nav-icon-circle">
-                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-certificate"></i>
                 </div>
                 <span class="nav-text">Certificates</span>
               </button>
 
               <button class="nav-item" data-tab="experience">
                 <div class="nav-icon-circle">
-                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-briefcase"></i>
                 </div>
                 <span class="nav-text">Experience</span>
               </button>
@@ -226,8 +207,9 @@
                   >
                     <div class="cert-img">
                       <img
-                        src="../templates/machine-learning.png"
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/machine-learning_jxkmcy.png"
                         alt="machine-cert"
+                        loading="lazy"
                       />
                     </div>
                     <h4>Machine Learning A-Z</h4>
@@ -244,8 +226,9 @@
                   >
                     <div class="cert-img">
                       <img
-                        src="../templates/python-cert.png"
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/python-cert_drrj7a.png"
                         alt="python-cert"
+                        loading="lazy"
                       />
                     </div>
                     <h4>Python for Data Science</h4>
@@ -256,9 +239,16 @@
                       ></i></span
                   ></a>
 
-                  <a href="" class="dark-card">
+                  <a
+                    href="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/aptis_ocbjww.png"
+                    class="dark-card"
+                  >
                     <div class="cert-img">
-                      <img src="../templates/aptis.png" alt="English-cert" />
+                      <img
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/aptis_ocbjww.png"
+                        alt="English-cert"
+                        loading="lazy"
+                      />
                     </div>
                     <h4>English cert</h4>
                     <p>British Council - 2024</p>
@@ -268,9 +258,16 @@
                       ></i></span
                   ></a>
 
-                  <a href="" class="dark-card">
+                  <a
+                    href="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/delfb1_x42glv.png"
+                    class="dark-card"
+                  >
                     <div class="cert-img">
-                      <img src="../templates/delfb1.png" alt="French-cert" />
+                      <img
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/delfb1_x42glv.png"
+                        alt="French-cert"
+                        loading="lazy"
+                      />
                     </div>
                     <h4>French cert</h4>
                     <p>Delf B1 - 2021</p>
@@ -280,23 +277,35 @@
                       ></i></span
                   ></a>
 
-                  <a href="" class="dark-card">
+                  <a
+                    href="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/tinh-phap_wu3td5.pn"
+                    class="dark-card"
+                  >
                     <div class="cert-img">
-                      <img src="../templates/tinh-phap.png" alt="French-cert" />
+                      <img
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/tinh-phap_wu3td5.png"
+                        alt="French-cert"
+                        loading="lazy"
+                      />
                     </div>
                     <h4>French province cert</h4>
                     <p>Quang Ninh province - 2022</p>
                     <span class="verify-btn"
                       >Verify<i
                         class="fa-solid fa-arrow-up-right-from-square"
-                      ></i></span
-                  ></a>
+                      ></i
+                    ></span>
+                  </a>
 
-                  <a href="" class="dark-card">
+                  <a
+                    href="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/cap-truong_vyz58a.png"
+                    class="dark-card"
+                  >
                     <div class="cert-img">
                       <img
-                        src="../templates/cap-truong.png"
+                        src="https://res.cloudinary.com/de95nsa46/image/upload/f_auto,q_auto/v1769944492/cap-truong_vyz58a.png"
                         alt="French-cert"
+                        loading="lazy"
                       />
                     </div>
                     <h4>school-level French competition</h4>
@@ -336,86 +345,260 @@
             <h3 class="skills-subtitle">Bringing ideas to life</h3>
           </div>
           <div class="project-list">
-            <a
-              href="https://github.com/Nozs002/My-Portfolio.git"
-              class="dark-card"
-            >
-              <div class="cert-img">
-                <img src="../templates/" alt="my-portfolio-project" />
+            <div class="project-card">
+              <div class="card-image">
+                <img src="/path-to-image.png" alt="Project Thumbnail" />
               </div>
-              <h4>My portfolio</h4>
-              <p>Member: 1 person</p>
-            </a>
-            <a
-              href="https://github.com/Nozs002/My-Portfolio.git"
-              class="dark-card"
-            >
-              <div class="cert-img">
-                <img src="../templates/" alt="mis-project" />
+
+              <div class="card-content">
+                <div class="card-header">
+                  <h4>Portfolio</h4>
+                  <span class="date">Dec 2026</span>
+                </div>
+
+                <p class="description">
+                  My personal portfolio website showcasing my projects and
+                  skills
+                </p>
+
+                <div class="tech-stack">
+                  <span class="tag">Flask</span>
+                  <span class="tag">html, css and javascript</span>
+                  <span class="tag">python</span>
+                </div>
+
+                <div class="card-actions">
+                  <a
+                    href="https://your-demo-link.com"
+                    target="_blank"
+                    class="btn-demo"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/your-repo"
+                    target="_blank"
+                    class="btn-github"
+                  >
+                    <i class="fab fa-github"></i> Source
+                  </a>
+                </div>
               </div>
-              <h4>MIS systems</h4>
-              <p>Member: 5 person</p>
-            </a>
-            <a
-              href="https://github.com/Nozs002/My-Portfolio.git"
-              class="dark-card"
-            >
-              <div class="cert-img">
-                <img src="../templates/" alt="Mis-project" />
-              </div>
-              <h4>My portfolio</h4>
-              <p>Member: 1 person</p>
-            </a>
-            <a
-              href="https://github.com/Nozs002/My-Portfolio.git"
-              class="dark-card"
-            >
-              <div class="cert-img">
-                <img src="../templates/" alt="Mis-project" />
-              </div>
-              <h4>My portfolio</h4>
-              <p>Member: 1 person</p>
-            </a>
-            <a
-              href="https://github.com/Nozs002/My-Portfolio.git"
-              class="dark-card"
-            >
-              <div class="cert-img">
-                <img src="../templates/" alt="Mis-project" />
-              </div>
-              <h4>My portfolio</h4>
-              <p>Member: 1 person</p>
-            </a>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Trang contact -->
       <section id="Contact" class="contact-section">
-        <h2>Contact</h2>
-        <h3>Connect with me</h3>
-        <p>
-          I'm always open to new challenges in Python backend development or
-          creative projects. Don't hesitate to send me a message.
-        </p>
-        <div>
-          <ul>
-            <li><b>Email:</b> Phamson26082005@gmail.com</li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/s%C6%A1n-ph%E1%BA%A1m-815198385/"
-                ><b>Linkedln</b></a
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2 class="section-title">Contact</h2>
+            <h3 class="gradient-text">Let's work together.</h3>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <p class="contact-desc">
+                I'm always ready for new challenges in Python Backend and Web
+                Development. Let's connect!
+              </p>
+
+              <ul class="info-list">
+                <li class="info-item">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="info-text">
+                    <span>Email</span>
+                    <a href="mailto:Phamson26082005@gmail.com"
+                      >Phamson26082005@gmail.com</a
+                    >
+                  </div>
+                </li>
+
+                <li class="info-item">
+                  <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                  <div class="info-text">
+                    <span>Phone / Zalo</span>
+                    <a href="tel:0987654321">0987 654 321</a>
+                  </div>
+                </li>
+
+                <li class="info-item social-row">
+                  <a
+                    href="https://linkedin.com/in/..."
+                    target="_blank"
+                    class="social-btn linkedin"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Nozs002"
+                    target="_blank"
+                    class="social-btn github"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="social-btn facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" target="_blank" class="social-btn instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-form-wrapper">
+              <form
+                action="https://formspree.io/f/MÃ_CỦA_BẠN_Ở_ĐÂY"
+                method="POST"
+                class="apple-form"
               >
-            </li>
-            <li>
-              <a href="https://github.com/Nozs002"><b>Github</b></a>
-            </li>
-          </ul>
-          <button>Send email now!!!!</button>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Tên của bạn/Recruiter"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="email@company.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Bạn muốn nhắn gửi gì cho tôi?..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                  Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- music box -->
+      <div class="music-box" id="musicBox">
+        <button class="toggle-music-btn" onclick="toggleMusicBox()">
+          <i class="fa-solid fa-chevron-down" id="toggleIcon"></i>
+        </button>
+
+        <div class="music-content">
+          <div class="music-disk">
+            <div class="disk-circle">
+              <img
+                src="https://i.pinimg.com/736x/18/d9/e1/18d9e1307019e91778c1b35133d19ae8.jpg"
+                alt="Song Art"
+                id="diskImg"
+              />
+              <div class="center-hole"></div>
+            </div>
+          </div>
+
+          <div class="music-info">
+            <div class="music-header">
+              <span class="label">Music Box</span>
+              <div class="sound-wave">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <h3 class="song-title">Angel Speed Up</h3>
+            <p class="artist-name">Shipu Artist</p>
+
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+
+            <div class="music-controls">
+              <button class="control-btn">
+                <i class="fa-solid fa-backward-step"></i>
+              </button>
+
+              <button class="control-btn play-btn" onclick="playPauseMusic()">
+                <i class="fa-solid fa-play" id="playIcon"></i>
+              </button>
+
+              <button class="control-btn">
+                <i class="fa-solid fa-forward-step"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="minimized-view" onclick="toggleMusicBox()">
+          <i class="fa-solid fa-music"></i>
+        </div>
+
+        <audio id="audioPlayer" src="./assets/music/song.mp3" loop></audio>
+      </div>
+
+      <!-- footer -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <h3>Son Pham</h3>
+              <p>Building digital products with passion and precision.</p>
+            </div>
+
+            <div class="footer-links">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-socials">
+              <h4>Follow Me</h4>
+              <div class="social-icons">
+                <a href="https://github.com/Nozs002" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://linkedin.com/in/..." target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a href="#" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 Son Pham. All rights reserved.</p>
+            <p class="design-by">
+              Designed with <i class="fa-solid fa-heart"></i> and
+              <i class="fa-brands fa-python"></i>
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
 
-    <script src="/static/script.js"></script>
+    <script src="../static/js/script.js"></script>
   </body>
 </html>

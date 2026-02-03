@@ -1,0 +1,122 @@
+.site-footer {
+  background-color: #000000;
+  color: #86868b;
+  padding: 60px 20px 30px;
+  font-size: 14px;
+  border-top: 1px solid #333; /* Đường kẻ ngăn cách mờ với phần Contact */
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Phần trên: Chia 3 cột */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Tự xuống dòng trên điện thoại */
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Cột Brand */
+.footer-brand h3 {
+  color: #f5f5f7; /* Màu trắng sáng */
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+/* Cột Links & Socials Header */
+.footer-links h4,
+.footer-socials h4 {
+  color: #f5f5f7;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Danh sách link */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #86868b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #2997ff;
+  text-decoration: underline;
+}
+
+/* Social Icons nhỏ gọn */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #86868b;
+  font-size: 20px;
+  transition:
+    transform 0.3s,
+    color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f5f5f7;
+  transform: translateY(-3px);
+}
+
+/* Đường kẻ ngang */
+.footer-divider {
+  height: 1px;
+  background-color: #333; /* Màu kẻ mờ */
+  margin-bottom: 30px;
+}
+
+/* Phần dưới: Copyright */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.design-by i {
+  color: #ff3b30; /* Trái tim màu đỏ */
+}
+
+.design-by .fa-python {
+  color: #ffd60a; /* Python màu vàng */
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Xếp dọc các cột */
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

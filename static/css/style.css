@@ -1,0 +1,11 @@
+@import "music-box.css";
+@import "base.css";
+@import "taskbar.css";
+@import "components.css";
+
+@import "home.css";
+@import "about.css";
+@import "skills.css";
+@import "projects.css";
+@import "contact.css";
+@import "footer.css";

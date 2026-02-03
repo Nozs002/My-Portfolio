@@ -1,0 +1,93 @@
+.projects-section {
+  min-height: 100vh;
+  margin: 0;
+  padding: 60px 40px;
+}
+
+.project-content {
+  background-color: #000000;
+  border-radius: 40px;
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 25px;
+}
+
+/* Khung thẻ */
+.project-card {
+  background: #1a1a1a; /* Màu tối hơn nền một chút */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Bay lên nhẹ khi hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Phần nội dung */
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Để đẩy nút xuống đáy nếu nội dung ngắn */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Công nghệ (Tags) */
+.tech-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #87cefa; /* Màu xanh da trời nhạt giống theme của bạn */
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Nút hành động */
+.card-actions {
+  margin-top: auto; /* Tự động đẩy xuống đáy thẻ */
+  display: flex;
+  gap: 15px;
+}
+
+.btn-demo,
+.btn-github {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-demo {
+  color: #fff;
+}
+.btn-github {
+  color: #888;
+}
+.btn-demo:hover {
+  color: #87cefa;
+}
+.btn-github:hover {
+  color: #fff;
+}

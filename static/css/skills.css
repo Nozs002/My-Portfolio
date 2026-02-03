@@ -1,0 +1,325 @@
+.skills-section {
+  padding: 30px 30px;
+}
+
+.skills-container {
+  margin: 0 auto;
+  /* background-color: var(--bg-color-dark); */
+  border-radius: 40px;
+  padding: 60px;
+  color: #ffffff;
+  /* box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); */
+  overflow: hidden;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 40px;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 40px;
+  padding: 36px;
+}
+
+.skills-body {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.skills-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #000000;
+  box-sizing: border-box;
+
+  padding: 40px 12px;
+  width: 74px;
+
+  border-radius: 100px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.skills-nav:hover {
+  width: 280px;
+  padding: 40px 20px;
+  border-radius: 25px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.nav-icon-circle {
+  width: 30px;
+  height: 30px;
+
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  border: 1px solid #86868b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #86868b;
+  transition: all 0.3 ease;
+}
+
+.nav-text {
+  font-size: 17px;
+  font-weight: 500;
+  color: #86868b;
+  max-width: 0;
+
+  display: block;
+  width: auto;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-10px);
+  margin-left: 0;
+  white-space: nowrap;
+
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-nav:hover .nav-text {
+  opacity: 1;
+  transform: translateX(0);
+  max-width: 200px;
+  margin-left: 15px;
+}
+
+.nav-item.active {
+  background: #333336;
+}
+
+.nav-item.active .nav-icon-circle {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.nav-item.active .nav-text {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-item:hover .nav-text {
+  color: #ffffff;
+  border-radius: 100px;
+}
+
+.skills-display-area {
+  flex-grow: 1;
+  min-height: 400px;
+
+  position: relative;
+}
+
+.tab-pane {
+  display: none; /* Ẩn mặc định */
+  animation: fadeIn 0.6s ease forwards;
+  background-color: #000000;
+  padding: 40px;
+  border-radius: 25px;
+
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.tab-pane::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tab-pane::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-pane::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.tab-pane.active {
+  display: block; /* Hiện khi active */
+}
+
+.dark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dark-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.dark-item i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b82f6;
+}
+
+/* 2. Style cho List (Certs & Exp) */
+.dark-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.dark-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dark-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border-radius: 16px;
+  border-bottom: 4px solid #a855f7;
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3 ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cert-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5 ease;
+}
+
+.dark-card:hover .cert-img img {
+  transform: scale(1.05);
+}
+
+.dark-card h4 {
+  margin: 15px 0 5px 0;
+  font-size: 18px;
+  color: white;
+}
+
+.dark-card p {
+  margin: 0;
+  color: #86868b;
+  font-size: 14px;
+}
+
+.verify-btn {
+  font-size: 14px;
+  color: #3b82f6;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cert-item:hover .verify-btn {
+  text-decoration: underline;
+}
+
+.time-tag {
+  display: inline-block;
+  background: #a855f7;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+  .skills-body {
+    flex-direction: column;
+  }
+
+  .skills-nav {
+    /* Trả lại chiều rộng full màn hình trên mobile */
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 10px;
+
+    /* Tắt hiệu ứng hover của PC */
+    transition: none;
+  }
+
+  .skills-nav:hover {
+    width: 100%; /* Không phóng to thu nhỏ gì cả */
+  }
+
+  .nav-text {
+    /* Luôn hiện chữ trên mobile */
+    opacity: 1;
+    transform: none;
+    display: block;
+  }
+
+  .nav-item {
+    padding: 10px 15px;
+    background: #1c1c1e; /* Thêm màu nền nhẹ để dễ nhìn nút */
+  }
+}
