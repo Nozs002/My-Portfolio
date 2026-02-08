@@ -132,6 +132,7 @@
   opacity: 0.6;
   animation: bounce 2s infinite;
   z-index: 4;
+  color: #1d1d1f;
 }
 
 .scroll-indicator span {
