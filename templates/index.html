@@ -13,6 +13,7 @@
   <body>
     <header class="taskbar">
       <nav class="menu_taskbar">
+        <div class="menu-indicator"></div>
         <a href="#Home" class="button_menu_taskbar active"
           ><i class="fa-solid fa-house"></i> Home</a
         >
@@ -145,6 +146,11 @@
       <!-- trang skills moi -->
 
       <section id="Skills" class="tech-hero-section">
+        <div class="taskbar-skills">
+          <h2>Tech stack</h2>
+          <h2>Certificates</h2>
+          <h2>Experience</h2>
+        </div>
         <div class="tech-container">
           <div class="layer">
             <div class="tech-header">
@@ -171,7 +177,7 @@
           <div class="layer">
             <div class="tech-title">
               <div class="soft-card-right">
-                <a href="#Project" class="tech-box-project">
+                <a href="#Projects" class="tech-box-project">
                   <span>>10</span>
                   <h4>projects</h4>
                 </a>
@@ -556,10 +562,12 @@
 
       <!-- music box -->
       <div class="music-box" id="musicBox">
-        <button class="toggle-music-btn" onclick="toggleMusicBox()">
+        <button class="toggle-music-btn" id="toggleBtn">
           <i class="fa-solid fa-chevron-down" id="toggleIcon"></i>
         </button>
-
+        <div class="minimized-view" id="minimizedView">
+          <i class="fa-solid fa-music"></i>
+        </div>
         <div class="music-content">
           <div class="music-disk">
             <div class="disk-circle">
@@ -658,6 +666,6 @@
       </footer>
     </main>
 
-    <script src="../static/js/script.js"></script>
+    <script type="module" src="../static/js/script.js"></script>
   </body>
 </html>

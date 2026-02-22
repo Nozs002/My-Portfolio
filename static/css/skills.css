@@ -277,18 +277,6 @@
   margin-bottom: 10px;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 900px) {
   .skills-body {

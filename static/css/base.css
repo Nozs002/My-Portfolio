@@ -31,22 +31,6 @@ html {
   position: relative;
 
   /* background-color: var(--bg-color-light); */
-  background: linear-gradient(to bottom, #fafafa 0%, #d7dde8 100%);
+  background: #d7dde8;
   color: var(--text-main);
 }
-
-/* body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-
-  opacity: 0.05; 
-  pointer-events: none;
-  z-index: 9999;
-} */

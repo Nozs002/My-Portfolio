@@ -46,6 +46,8 @@
   border-radius: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   z-index: 2;
+  contain: paint;
+  transform: translate3d(0, 0, 0);
 }
 
 .badge {

@@ -29,18 +29,48 @@
   -webkit-mask-image: linear-gradient(to top, black 20%, transparent 100%);
   mask-image: linear-gradient(to top, black 20%, transparent 100%);
 
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  border-radius: 70% 0 0 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.55);
+  border: none;
 
-  /* border: none; */
   z-index: 3;
   pointer-events: none;
+
+  transform: translate3d(0, 0, 0);
+  contain: paint;
+}
+
+.taskbar-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  box-sizing: border-box;
+  padding: 10px;
+
+  position: absolute;
+  bottom: 20px;
+
+  background-color: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translate3d(0, 0, 0);
+  contain: paint;
+
+  z-index: 100;
+}
+
+.taskbar-skills h2 {
+  padding: 0;
+  margin: 0;
 }
 
 .tech-container {
@@ -182,6 +212,8 @@
 
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+  transform: translate3d(0, 0, 0);
+  contain: paint;
 }
 
 .tech-box-project span {
@@ -202,12 +234,15 @@
 .tech-box-github {
   background-color: rgba(255, 255, 255, 0.15);
 
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
   /* background-color: rgb(107, 114, 128); */
   color: #1a202c;
+
+  transform: translate3d(0, 0, 0);
+  contain: paint;
 }
 
 .tech-title h2 {
@@ -225,38 +260,49 @@
   font-weight: 900;
 }
 
+/* phan ben trai */
+
 .tech-content {
   width: auto;
   max-width: 50vw;
-  height: 70%;
   display: grid;
+  height: auto;
+  max-height: 60%;
+
   grid-template-columns: 1fr 1fr; /* Chia 2 cột nhỏ */
   gap: 20px;
   z-index: 10;
-  text-align: right;
+  justify-self: right;
   margin-right: 5%;
   margin-top: 5%;
 }
 
 .soft-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Bóng Soft UI */
   transition: transform 0.3s ease;
+
+  transform: translate3d(0, 0, 0);
+  contain: paint;
 }
 
 .soft-card:hover {
   transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.6);
 }
 
-/* Chi tiết Card */
 .main-card {
   grid-column: span 2;
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .list-card {
   grid-column: span 2;
 }
@@ -296,7 +342,7 @@
 .soft-card p {
   margin: 0;
   font-size: 13px;
-  color: #718096;
+  color: #1a202c;
 }
 
 .list-card ul {
@@ -308,22 +354,11 @@
   margin-top: 10px;
 }
 .list-card li {
-  color: #4a5568;
+  color: #1a202c;
   font-size: 14px;
   display: flex;
   gap: 8px;
   align-items: center;
-}
-
-/* --- 4. ANIMATION & RESPONSIVE --- */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
 }
 
 /* Mobile: Xếp chồng lên nhau */

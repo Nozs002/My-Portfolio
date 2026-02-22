@@ -1,37 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetchProjects();
-});
-
-// Hàm gọi API từ FastAPI
-async function fetchProjects() {
-  try {
-    // Gọi vào endpoint chúng ta đã viết trong main.py
-    const response = await fetch("/api/projects");
-    const projects = await response.json();
-
-    renderProjects(projects);
-  } catch (error) {
-    console.error("Lỗi khi lấy dữ liệu:", error);
-  }
-}
-
-// Hàm hiển thị dữ liệu lên HTML
-function renderProjects(data) {
-  const list = document.getElementById("project-list");
-
-  data.forEach((project) => {
-    const card = document.createElement("div");
-    card.classList.add("project-card");
-
-    card.innerHTML = `
-            <h3>${project.title}</h3>
-            <small>${project.tech}</small>
-            <p>${project.desc}</p>
-        `;
-
-    list.appendChild(card);
-  });
-}
+import "./home.js";
+import "./taskbar.js";
+import "./tech-stack.js";
+import "./utils.js";
+import "./contact.js";
 
 // BONUS: Tương tác ngược lại với Spline (Nâng cao)
 // Bạn có thể lắng nghe sự kiện từ Spline Viewer nếu cần

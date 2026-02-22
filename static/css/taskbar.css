@@ -16,9 +16,8 @@
 .menu_taskbar {
   pointer-events: auto;
 
-  position: absolute;
+  position: relative;
   left: 50%;
-  transform: translateX(-50%);
   top: 20px;
 
   color: rgb(29, 29, 31);
@@ -35,11 +34,31 @@
 
   background-color: rgba(255, 255, 255, 0.15);
 
-  backdrop-filter: saturate(180%) blur(20px); /* làm mờ hậu cảnh đằng sau */
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translate3d(-50%, 0, 0);
+  contain: paint;
+  z-index: 2;
+}
+
+.menu-indicator {
+  position: absolute;
+  height: calc(100% - 10px); /* Trừ hao padding trên dưới của cha (5px*2) */
+  top: 5px; /* Canh chỉnh cho vừa khung */
+  left: 0; /* Vị trí ban đầu */
+
+  background-color: white; /* Màu nền của viên thuốc */
+  border-radius: 48px; /* Bo tròn giống nút */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  /* ANIMATION THẦN THÁNH Ở ĐÂY */
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Hiệu ứng 'cubic-bezier' này tạo cảm giác nảy nảy (bouncy) rất vui mắt */
+
+  z-index: 1;
 }
 
 .button_menu_taskbar {
@@ -60,6 +79,7 @@
   border-radius: 48px; /* bo tròn nút */
   transition: all 0.3s ease; /* hiệu ứng chuyển mượt */
   cursor: pointer;
+  z-index: 2;
 }
 
 .button_menu_taskbar:hover {
@@ -67,8 +87,7 @@
 }
 
 .button_menu_taskbar.active {
-  background-color: white;
+  background-color: transparent;
   color: black;
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
