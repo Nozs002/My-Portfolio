@@ -1,313 +1,138 @@
 .skills-section {
-  padding: 30px 30px;
-}
-
-.skills-container {
-  margin: 0 auto;
-  /* background-color: var(--bg-color-dark); */
-  border-radius: 40px;
-  padding: 60px;
-  color: #ffffff;
-  /* box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); */
-  overflow: hidden;
-}
-
-.skills-header {
-  text-align: center;
-  margin-bottom: 40px;
-  align-items: center;
-  background-color: #000000;
-  border-radius: 40px;
-  padding: 36px;
-}
-
-.skills-body {
-  display: flex;
-  gap: 30px;
-  align-items: stretch;
-}
-
-.skills-nav {
+  background: linear-gradient(
+    to bottom,
+    #13222e 0%,
+    #3b5a69 40%,
+    #9cbcc9 80%,
+    #e8f4f8 100%
+  );
+  padding: 0px 20px;
+  overflow: hidden; /* Cắt phần thừa nếu chữ quá to */
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  background-color: #000000;
-  box-sizing: border-box;
-
-  padding: 40px 12px;
-  width: 74px;
-
-  border-radius: 100px;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  flex-shrink: 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-.skills-nav:hover {
-  width: 280px;
-  padding: 40px 20px;
-  border-radius: 25px;
-}
-
-.nav-item {
-  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  /* justify-content: flex-start; */
+}
 
-  box-sizing: border-box;
-
-  padding: 10px;
-
+.skills-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  background: transparent;
+  height: 300px;
+
+  -webkit-mask-image: linear-gradient(to top, black 20%, transparent 100%);
+  mask-image: linear-gradient(to top, black 20%, transparent 100%);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.55);
   border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  margin: 0;
-}
 
-.nav-icon-circle {
-  width: 30px;
-  height: 30px;
+  z-index: 3;
+  pointer-events: none;
 
-  min-width: 30px;
-  min-height: 30px;
-  border-radius: 50%;
-  border: 1px solid #86868b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #86868b;
-  transition: all 0.3 ease;
-}
-
-.nav-text {
-  font-size: 17px;
-  font-weight: 500;
-  color: #86868b;
-  max-width: 0;
-
-  display: block;
-  width: auto;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateX(-10px);
-  margin-left: 0;
-  white-space: nowrap;
-
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.skills-nav:hover .nav-text {
-  opacity: 1;
-  transform: translateX(0);
-  max-width: 200px;
-  margin-left: 15px;
-}
-
-.nav-item.active {
-  background: #333336;
-}
-
-.nav-item.active .nav-icon-circle {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
-}
-
-.nav-item.active .nav-text {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-.nav-item:hover .nav-text {
-  color: #ffffff;
-  border-radius: 100px;
-}
-
-.skills-display-area {
-  flex-grow: 1;
-  min-height: 400px;
-
-  position: relative;
+  transform: translate3d(0, 0, 0);
+  contain: paint;
 }
 
 .tab-pane {
-  display: none; /* Ẩn mặc định */
+  display: none; 
   animation: fadeIn 0.6s ease forwards;
-  background-color: #000000;
-  padding: 40px;
-  border-radius: 25px;
-
-  max-height: 800px;
-  overflow-y: auto;
-  padding-right: 15px;
-  box-sizing: border-box;
-}
-
-.tab-pane::-webkit-scrollbar {
-  width: 6px;
-}
-
-.tab-pane::-webkit-scrollbar-track {
-  background: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.tab-pane::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 10px;
+  position: absolute;
+  inset:0;
 }
 
 .tab-pane.active {
-  display: block; /* Hiện khi active */
+  display: block; 
 }
 
-.dark-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.dark-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px 20px;
-  border-radius: 20px;
-  text-align: center;
-  color: #ffffff;
-  transition: transform 0.3s;
+/* Thanh dieu khien skills */
+.tab-controls {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
   align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 20px;
+  
+  --animation-state: running; 
+  z-index: 100;
 }
 
-.dark-item i {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #3b82f6;
-}
-
-/* 2. Style cho List (Certs & Exp) */
-.dark-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
-}
-
-.dark-timeline {
+/* Cục đen bo tròn chứa các dots */
+.dots-wrapper {
+  background-color: #2c2c2e; 
+  padding: 12px 18px;
+  border-radius: 40px; 
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 12px;
 }
 
-.dark-card {
-  display: block;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 12px;
-  border-radius: 16px;
-  border-bottom: 4px solid #a855f7;
+/* Các chấm tròn mặc định (Chưa active) */
+.apple-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #86868b; 
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
   overflow: hidden;
-  text-decoration: none;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3 ease;
+  
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.dark-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+.apple-dot.active {
+  width: 40px; 
+  background-color: rgba(255, 255, 255, 0.3); 
 }
 
-.cert-img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-
-.cert-img img {
-  width: 100%;
+/* Thanh tiến trình màu trắng chạy bên trong chấm active */
+.apple-dot .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5 ease;
+  width: 0%;
+  background-color: #ffffff; 
+  border-radius: 10px;
 }
 
-.dark-card:hover .cert-img img {
-  transform: scale(1.05);
+.apple-dot.active .progress {
+  animation: fillProgress 6.25s linear forwards; 
+  
+  animation-play-state: var(--animation-state); 
 }
 
-.dark-card h4 {
-  margin: 15px 0 5px 0;
-  font-size: 18px;
+@keyframes fillProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* NÚT PLAY/PAUSE BÊN CẠNH */
+.apple-play-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #2c2c2e;
+  border: none;
   color: white;
-}
-
-.dark-card p {
-  margin: 0;
-  color: #86868b;
   font-size: 14px;
-}
-
-.verify-btn {
-  font-size: 14px;
-  color: #3b82f6;
-  font-weight: 500;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  transition: transform 0.2s;
 }
 
-.cert-item:hover .verify-btn {
-  text-decoration: underline;
-}
-
-.time-tag {
-  display: inline-block;
-  background: #a855f7;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 900px) {
-  .skills-body {
-    flex-direction: column;
-  }
-
-  .skills-nav {
-    /* Trả lại chiều rộng full màn hình trên mobile */
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 20px;
-    gap: 10px;
-
-    /* Tắt hiệu ứng hover của PC */
-    transition: none;
-  }
-
-  .skills-nav:hover {
-    width: 100%; /* Không phóng to thu nhỏ gì cả */
-  }
-
-  .nav-text {
-    /* Luôn hiện chữ trên mobile */
-    opacity: 1;
-    transform: none;
-    display: block;
-  }
-
-  .nav-item {
-    padding: 10px 15px;
-    background: #1c1c1e; /* Thêm màu nền nhẹ để dễ nhìn nút */
-  }
+.apple-play-btn:hover {
+  background-color: #3a3a3c; 
+  transform: scale(1.05);
 }

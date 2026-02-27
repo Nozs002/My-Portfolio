@@ -85,6 +85,7 @@ function playPauseMusic() {
   }
 }
 
+if(audio){
 audio.addEventListener("timeupdate", (e) => {
   const currentTime = e.target.currentTime;
   const duration = e.target.duration;
@@ -93,7 +94,9 @@ audio.addEventListener("timeupdate", (e) => {
 
   progressBar.style.width = `${progressPercent}%`;
 });
+}
 
+if(progressContainer){
 progressContainer.addEventListener("click", (e) => {
   const progressWidth = progressContainer.clientWidth;
   const clickX = e.offsetX;
@@ -101,6 +104,7 @@ progressContainer.addEventListener("click", (e) => {
   const duration = audio.duration;
   audio.currentTime = (clickX / progressWidth) * duration;
 });
+}
 
 audio.addEventListener("ended", (e) => {
   progressBar.style.width = "0%";

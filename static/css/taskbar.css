@@ -54,7 +54,6 @@
   border-radius: 48px; /* Bo tròn giống nút */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
-  /* ANIMATION THẦN THÁNH Ở ĐÂY */
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* Hiệu ứng 'cubic-bezier' này tạo cảm giác nảy nảy (bouncy) rất vui mắt */
 
@@ -66,7 +65,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; /* giữ cho khung không bị phình ra bởi padding */
+  box-sizing: border-box; 
   gap: 8px;
   padding: 10px 24px;
 
@@ -74,10 +73,10 @@
   text-decoration: none;
   white-space: nowrap; /* cấm xuống dòng */
   font-size: 14px;
-  font-weight: 500; /*độ đậm chữ bình thường*/
+  font-weight: 500; 
 
-  border-radius: 48px; /* bo tròn nút */
-  transition: all 0.3s ease; /* hiệu ứng chuyển mượt */
+  border-radius: 48px; 
+  transition: all 0.3s ease; 
   cursor: pointer;
   z-index: 2;
 }

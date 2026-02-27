@@ -1,6 +1,6 @@
 import "./home.js";
 import "./taskbar.js";
-import "./tech-stack.js";
+import "./skills.js";
 import "./utils.js";
 import "./contact.js";
 
