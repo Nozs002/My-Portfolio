@@ -111,70 +111,95 @@
 
 /* --- CỘT PHẢI: FORM --- */
 .contact-form-wrapper {
-  background: #1c1c1e; /* Màu xám đen nền form */
+  background: rgba(15, 23, 41, 0.6); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
   padding: 40px;
-  border-radius: 30px; /* Bo góc lớn */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  max-width: 600px; 
+  margin: 0 auto;   
   width: 100%;
   box-sizing: border-box;
 }
 
+.apple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .form-group {
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .form-group label {
-  display: block;
-  font-size: 14px;
-  color: #86868b;
-  margin-bottom: 8px;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: #cbd5e1; 
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .apple-form input,
 .apple-form textarea {
   width: 100%;
-  background: #000000; /* Input nền đen trên nền xám */
-  border: 1px solid #333;
-  border-radius: 12px; /* Bo góc input */
+  background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   padding: 16px;
-  color: #fff;
-  font-size: 16px;
-  font-family: inherit;
-  outline: none;
-  transition:
-    border-color 0.3s,
-    box-shadow 0.3s;
+  color: #f8fafc; 
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  outline: none; 
+  transition: all 0.3s ease;
   box-sizing: border-box;
+}
+
+.apple-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.apple-form input::placeholder,
+.apple-form textarea::placeholder {
+  color: #64748b;
 }
 
 .apple-form input:focus,
 .apple-form textarea:focus {
-  border-color: #2997ff; /* Viền xanh khi nhập */
-  box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.2); /* Glow xanh nhẹ */
+  background: rgba(0, 229, 255, 0.05); 
+  border-color: #00e5ff; 
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); 
 }
 
 .send-btn {
-  width: 100%;
-  padding: 18px;
-  background: #0071e3; /* Màu xanh nút gửi chuẩn Apple */
-  color: white;
-  border: none;
-  border-radius: 99px; /* Viên thuốc */
-  font-size: 16px;
-  font-weight: 600;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
-  transition: all 0.3s;
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 10px; 
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  margin-top: 10px;
 }
 
 .send-btn:hover {
-  background: #0077ed;
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(0, 113, 227, 0.4);
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.8), rgba(168, 85, 247, 0.8));
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.4);
+  transform: translateY(-3px); 
 }
 
 /* --- RESPONSIVE MOBILE --- */

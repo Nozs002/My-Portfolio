@@ -1,0 +1,170 @@
+/* --- KHUNG BAO NGOÀI TRỤC THỜI GIAN --- */
+.timeline-v2 {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 0;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 3;
+}
+
+/* ĐƯỜNG KẺ GIỮA (Trục Gradient dọc) */
+.timeline-v2::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, #00e5ff 0%, #ff4d6d 100%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* --- TỪNG KHỐI KINH NGHIỆM --- */
+.tl-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* THUẬT TOÁN XẾP TRÁI/PHẢI */
+.tl-item:nth-child(odd) {
+  left: 0;
+}
+
+.tl-item:nth-child(even) {
+  left: 50%;
+}
+
+/* --- DẤU CHẤM TRÒN TRÊN TRỤC (NODE) --- */
+.tl-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #00e5ff;
+  background: #0f172a;
+  top: 45px;
+  z-index: 3;
+}
+
+/* Đặt dấu chấm cho khối bên Trái (nằm ở rìa phải của khối) */
+.tl-item:nth-child(odd) .tl-dot {
+  right: -8px;
+}
+/* Đặt dấu chấm cho khối bên Phải (nằm ở rìa trái của khối) */
+.tl-item:nth-child(even) .tl-dot {
+  left: -8px;
+}
+
+/* --- NGÀY THÁNG CĂN RA GIỮA --- */
+.tl-date {
+  position: absolute;
+  top: 42px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #00e5ff;
+  width: 200px;
+}
+
+.tl-item:nth-child(odd) .tl-date {
+  right: -240px;
+  text-align: left;
+}
+
+.tl-item:nth-child(even) .tl-date {
+  left: -240px;
+  text-align: right;
+}
+
+.tl-content {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tl-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.tl-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.tl-content .company {
+  display: block;
+  font-size: 1rem;
+  color: #ff4d6d;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* --- TÚT LẠI LIST DẤU CHẤM (BULLETS) --- */
+.tl-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tl-content li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tl-content li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 0.7rem;
+  color: #00e5ff;
+}
+
+@media (max-width: 768px) {
+  .timeline-v2::after {
+    left: 20px;
+  }
+
+  .tl-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .tl-item:nth-child(even) {
+    left: 0;
+  }
+
+  .tl-item:nth-child(odd) .tl-dot,
+  .tl-item:nth-child(even) .tl-dot {
+    left: 12px;
+    right: auto;
+  }
+
+  .tl-item:nth-child(odd) .tl-date,
+  .tl-item:nth-child(even) .tl-date {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: left;
+    margin-bottom: 15px;
+    display: block;
+  }
+}

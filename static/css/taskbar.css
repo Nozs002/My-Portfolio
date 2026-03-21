@@ -20,7 +20,7 @@
   left: 50%;
   top: 20px;
 
-  color: rgb(29, 29, 31);
+  color: var(--text-dark);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -32,13 +32,13 @@
   max-width: 90%;
   height: auto;
 
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--surface-glass);
 
   backdrop-filter: saturate(180%) blur(10px);
   -webkit-backdrop-filter: saturate(180%) blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 100px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
   transform: translate3d(-50%, 0, 0);
   contain: paint;
   z-index: 2;
@@ -50,11 +50,11 @@
   top: 5px; /* Canh chỉnh cho vừa khung */
   left: 0; /* Vị trí ban đầu */
 
-  background-color: white; /* Màu nền của viên thuốc */
-  border-radius: 48px; /* Bo tròn giống nút */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff; /* Màu nền của viên thuốc */
+  border-radius: var(--radius-pill); /* Bo tròn giống nút */
+  box-shadow: var(--shadow-sm);
 
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all var(--duration-slow) cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* Hiệu ứng 'cubic-bezier' này tạo cảm giác nảy nảy (bouncy) rất vui mắt */
 
   z-index: 1;
@@ -65,18 +65,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   gap: 8px;
   padding: 10px 24px;
 
-  color: rgb(29, 29, 31);
+  color: var(--text-dark);
   text-decoration: none;
   white-space: nowrap; /* cấm xuống dòng */
   font-size: 14px;
-  font-weight: 500; 
+  font-weight: 500;
 
-  border-radius: 48px; 
-  transition: all 0.3s ease; 
+  border-radius: var(--radius-pill);
+  transition: all var(--duration-base) var(--ease-standard);
   cursor: pointer;
   z-index: 2;
 }
@@ -87,6 +87,6 @@
 
 .button_menu_taskbar.active {
   background-color: transparent;
-  color: black;
+  color: #000000;
   font-weight: 600;
 }

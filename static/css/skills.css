@@ -1,3 +1,8 @@
+@import "tech-stack.css";
+@import "certificates.css";
+@import "experiences.css";
+@import "projects.css";
+
 .skills-section {
   background: linear-gradient(
     to bottom,
@@ -7,7 +12,7 @@
     #e8f4f8 100%
   );
   padding: 0px 20px;
-  overflow: hidden; /* Cắt phần thừa nếu chữ quá to */
+  overflow: hidden;
   font-family: "Inter", sans-serif;
   height: 100vh;
   width: 100%;
@@ -39,17 +44,24 @@
 
   transform: translate3d(0, 0, 0);
   contain: paint;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.skills-section:has(.apple-dot[data-index="0"].active)::after {
+  opacity: 1;
 }
 
 .tab-pane {
-  display: none; 
+  display: none;
   animation: fadeIn 0.6s ease forwards;
   position: absolute;
-  inset:0;
+  inset: 0;
 }
 
 .tab-pane.active {
-  display: block; 
+  display: block;
 }
 
 /* Thanh dieu khien skills */
@@ -57,18 +69,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; 
+  gap: 15px;
   margin-bottom: 20px;
-  
-  --animation-state: running; 
+
+  --animation-state: running;
   z-index: 100;
 }
 
 /* Cục đen bo tròn chứa các dots */
 .dots-wrapper {
-  background-color: #2c2c2e; 
+  background-color: rgba(242, 242, 247, 0.28);
+  backdrop-filter: saturate(180%) blur(7px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
   padding: 12px 18px;
-  border-radius: 40px; 
+  border-radius: 40px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -79,19 +95,19 @@
   width: 8px;
   height: 8px;
   border-radius: 10px;
-  background-color: #86868b; 
+  background-color: #86868b;
   border: none;
   cursor: pointer;
   padding: 0;
   position: relative;
   overflow: hidden;
-  
+
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .apple-dot.active {
-  width: 40px; 
-  background-color: rgba(255, 255, 255, 0.3); 
+  width: 40px;
+  background-color: rgba(193, 193, 198, 0.654);
 }
 
 /* Thanh tiến trình màu trắng chạy bên trong chấm active */
@@ -101,19 +117,23 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background-color: #ffffff; 
+  background-color: #2c2c2e;
   border-radius: 10px;
 }
 
 .apple-dot.active .progress {
-  animation: fillProgress 6.25s linear forwards; 
-  
-  animation-play-state: var(--animation-state); 
+  animation: fillProgress 10s linear forwards;
+
+  animation-play-state: var(--animation-state);
 }
 
 @keyframes fillProgress {
-  0% { width: 0%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* NÚT PLAY/PAUSE BÊN CẠNH */
@@ -121,9 +141,11 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: #2c2c2e;
-  border: none;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #2c2c2e;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -133,6 +155,7 @@
 }
 
 .apple-play-btn:hover {
-  background-color: #3a3a3c; 
+  background-color: #3a3a3c;
   transform: scale(1.05);
+  color: white;
 }
