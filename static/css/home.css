@@ -8,23 +8,7 @@
   padding-left: 10%;
   box-sizing: border-box;
   overflow: hidden; /* Cắt bỏ phần thừa nếu robot to quá */
-}
-
-.home-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(245, 245, 247, 0) 0%,
-    var(--bg-color) 100%
-  );
-  z-index: 3;
-  pointer-events: none;
+  background: transparent;
 }
 
 .Home-bg-3d {
@@ -47,7 +31,33 @@
   box-shadow: var(--shadow-lg);
   z-index: 2;
   contain: paint;
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+  transition:
+    transform 1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 1s ease;
+}
+
+.home-content.reveal {
   transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.typing-text::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  color: #3b82f6; /* Một màu nổi bật từ gradient */
+  -webkit-text-fill-color: #3b82f6; /* Ghi đè lại thuộc tính transparent của gradient-text */
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .badge {

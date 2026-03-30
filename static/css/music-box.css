@@ -174,11 +174,12 @@
 }
 
 .progress-bar {
-  width: 40%; /* Demo 40% */
+  width: 0%; /* Khởi đầu từ 0 */
   height: 100%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px #fff;
+  transition: width 0.1s linear; /* Thêm transition cho mượt */
 }
 
 /* Nút điều khiển */

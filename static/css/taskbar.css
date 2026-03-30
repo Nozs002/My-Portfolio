@@ -28,9 +28,12 @@
   padding: 5px;
   gap: 8px;
 
-  width: max-content;
+  width: 0;
   max-width: 90%;
   height: auto;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
 
   background-color: var(--surface-glass);
 
@@ -42,6 +45,16 @@
   transform: translate3d(-50%, 0, 0);
   contain: paint;
   z-index: 2;
+  transition:
+    width 1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.8s ease,
+    padding 1s ease;
+}
+
+.menu_taskbar.expanded {
+  width: max-content;
+  opacity: 1;
+  padding: 5px 15px; /* Thêm padding khi mở rộng */
 }
 
 .menu-indicator {

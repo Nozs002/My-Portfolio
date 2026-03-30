@@ -55,8 +55,18 @@ html {
   line-height: 1.5;
   font-style: normal;
   position: relative;
+}
 
-  background: #d7dde8;
+body {
+  background: linear-gradient(
+    155deg,
+    #13222e 0%,
+    #3b5a69 40%,
+    #9cbcc9 80%,
+    #bbe3f0 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--text-main);
 }
 

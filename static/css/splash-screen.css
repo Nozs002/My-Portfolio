@@ -1,0 +1,69 @@
+/* --- Splash Screen --- */
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  background: #13222e; /* Trùng màu nền Gradient tối nhất */
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.8s;
+}
+
+#splash-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  animation: splashFadeIn 1s ease-out;
+}
+
+.splash-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.splash-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+#enter-btn {
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #00e5ff, #af52de);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+#enter-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 229, 255, 0.5);
+}
+
+@keyframes splashFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
